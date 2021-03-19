@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Mar 19 15:06:04 2021
+# Process ID: 11482
+# Current directory: /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo
+# Command line: vivado w4_algo/w4_algo.xpr
+# Log file: /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/vivado.log
+# Journal file: /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project w4_algo/w4_algo.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/user_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/CAD/Xilinx/2019.2/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:myfunc:1.0'. The one found in IP location '/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/user_ip_repo/xilinx_com_hls_myfunc_1_0_1' will take precedence over the same IP in location /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/user_ip_repo/xilinx_com_hls_myfunc_1_0
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 6808.969 ; gain = 257.344 ; free physical = 11276 ; free virtual = 14655
+open_run impl_1
+INFO: [Device 21-403] Loading part xcku15p-ffva1760-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 7869.941 ; gain = 0.000 ; free physical = 9978 ; free virtual = 13455
+INFO: [Netlist 29-17] Analyzing 2046 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 8770.207 ; gain = 136.156 ; free physical = 9165 ; free virtual = 12642
+Restored from archive | CPU: 7.330000 secs | Memory: 118.938087 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 8770.207 ; gain = 136.156 ; free physical = 9164 ; free virtual = 12641
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8770.207 ; gain = 0.000 ; free physical = 9185 ; free virtual = 12662
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 254 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 2 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 20 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 9 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 194 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 10 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 16 instances
+  SRLC32E => SRL16E: 2 instances
+
+open_run: Time (s): cpu = 00:01:25 ; elapsed = 00:01:51 . Memory (MB): peak = 9215.781 ; gain = 2270.488 ; free physical = 8730 ; free virtual = 12220
+open_report: Time (s): cpu = 00:00:23 ; elapsed = 00:00:07 . Memory (MB): peak = 9396.070 ; gain = 155.844 ; free physical = 8339 ; free virtual = 11831

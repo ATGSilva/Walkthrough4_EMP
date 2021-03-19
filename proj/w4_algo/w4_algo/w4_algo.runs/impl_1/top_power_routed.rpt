@@ -1,0 +1,358 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date             : Fri Mar 19 14:39:03 2021
+| Host             : excession.phy.bris.ac.uk running 64-bit Scientific Linux release 7.9 (Nitrogen)
+| Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+| Design           : top
+| Device           : xcku15p-ffva1760-2-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 3.555        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 2.407        |
+| Device Static (W)        | 1.148        |
+| Effective TJA (C/W)      | 0.7          |
+| Max Ambient (C)          | 97.4         |
+| Junction Temperature (C) | 27.6         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.385 |       37 |       --- |             --- |
+| CLB Logic                |     0.035 |   122189 |       --- |             --- |
+|   LUT as Logic           |     0.028 |    39259 |    522720 |            7.51 |
+|   Register               |     0.003 |    66064 |   1045440 |            6.32 |
+|   LUT as Distributed RAM |     0.002 |     1754 |    161280 |            1.09 |
+|   LUT as Shift Register  |     0.001 |      244 |    161280 |            0.15 |
+|   CARRY8                 |    <0.001 |      963 |     65340 |            1.47 |
+|   BUFG                   |    <0.001 |        1 |        88 |            1.14 |
+|   Others                 |     0.000 |     1465 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |      855 |    522720 |            0.16 |
+| Signals                  |     0.085 |   119370 |       --- |             --- |
+| Block RAM                |     1.169 |      384 |       984 |           39.02 |
+| MMCM                     |     0.292 |        0 |       --- |             --- |
+| I/O                      |     0.012 |        6 |       512 |            1.17 |
+| GTH                      |     0.313 |        1 |        44 |            2.27 |
+| Hard IPs                 |     0.116 |        1 |       --- |             --- |
+|   PCIE                   |     0.116 |        1 |       --- |             --- |
+| Static Power             |     1.148 |          |           |                 |
+| Total                    |     3.555 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++------------+-------------+-----------+-------------+------------+
+| Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++------------+-------------+-----------+-------------+------------+
+| Vccint     |       0.850 |     2.360 |       2.038 |      0.322 |
+| Vccint_io  |       0.850 |     0.099 |       0.002 |      0.097 |
+| Vccbram    |       0.850 |     0.116 |       0.112 |      0.004 |
+| Vccaux     |       1.800 |     0.498 |       0.162 |      0.337 |
+| Vccaux_io  |       1.800 |     0.079 |       0.006 |      0.073 |
+| Vcco33     |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25     |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18     |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15     |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135    |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12     |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vcco10     |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccadc     |       1.800 |     0.008 |       0.000 |      0.008 |
+| MGTAVcc    |       0.900 |     0.088 |       0.077 |      0.011 |
+| MGTAVtt    |       1.200 |     0.177 |       0.154 |      0.023 |
+| MGTVccaux  |       1.800 |     0.012 |       0.012 |      0.000 |
+| MGTYAVcc   |       0.900 |     0.000 |       0.000 |      0.000 |
+| MGTYAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTYVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
++------------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 0.7                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 0.9                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                                                                                                                                                                                                                                                                                               | Domain                                                                                                                                                                                                                                                                                                                                                                               | Constraint (ns) |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| axi_clk                                                                                                                                                                                                                                                                                                                                                                                             | infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_USERCLK                                                                                                                                                                                                                                                                                   |             8.0 |
+| clk160s_u                                                                                                                                                                                                                                                                                                                                                                                           | ttc/clocks/clk160s_u                                                                                                                                                                                                                                                                                                                                                                 |             6.2 |
+| clk160s_u_1                                                                                                                                                                                                                                                                                                                                                                                         | ttc/clocks/clk160s_u                                                                                                                                                                                                                                                                                                                                                                 |             6.2 |
+| clk_40_extern                                                                                                                                                                                                                                                                                                                                                                                       | ttc/clocks/clk40_u                                                                                                                                                                                                                                                                                                                                                                   |            25.0 |
+| clk_40_extern_i                                                                                                                                                                                                                                                                                                                                                                                     | infra/osc_clock/clk_40ext_i                                                                                                                                                                                                                                                                                                                                                          |            25.0 |
+| clk_40_pseudo                                                                                                                                                                                                                                                                                                                                                                                       | ttc/clocks/clk40_u                                                                                                                                                                                                                                                                                                                                                                   |            25.0 |
+| clk_40_pseudo_i                                                                                                                                                                                                                                                                                                                                                                                     | infra/clocks/clk_aux_i                                                                                                                                                                                                                                                                                                                                                               |            25.0 |
+| clk_payload_extern                                                                                                                                                                                                                                                                                                                                                                                  | ttc/clocks/clk_p_u                                                                                                                                                                                                                                                                                                                                                                   |             4.2 |
+| clk_payload_pseudo                                                                                                                                                                                                                                                                                                                                                                                  | ttc/clocks/clk_p_u                                                                                                                                                                                                                                                                                                                                                                   |             4.2 |
+| infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK                  | infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/txoutclk_out[0]                                                                |             4.0 |
+| infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_7_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_7_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_7_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_7_gthe4_cpll_cal_tx_i/txoutclkmon |             8.0 |
+| infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_intclk/O                                                                                                                                                                                                                                                                                             | infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_INTCLK                                                                                                                                                                                                                                                                                    |          1000.0 |
+| ipbus_clk                                                                                                                                                                                                                                                                                                                                                                                           | infra/clocks/I                                                                                                                                                                                                                                                                                                                                                                       |            32.0 |
+| osc_clk                                                                                                                                                                                                                                                                                                                                                                                             | osc_clk_p                                                                                                                                                                                                                                                                                                                                                                            |            25.0 |
+| pcie_sys_clk                                                                                                                                                                                                                                                                                                                                                                                        | pcie_sys_clk_p                                                                                                                                                                                                                                                                                                                                                                       |            10.0 |
+| qpll0outclk_out[0]                                                                                                                                                                                                                                                                                                                                                                                  | infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_common.gen_common_container[0].gen_enabled_common.gthe4_common_wrapper_inst/common_inst/qpll0outclk_out[0]                                                      |             0.2 |
+| qpll0outrefclk_out[0]                                                                                                                                                                                                                                                                                                                                                                               | infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_common.gen_common_container[0].gen_enabled_common.gthe4_common_wrapper_inst/common_inst/qpll0outrefclk_out[0]                                                   |            10.0 |
+| qpll1outclk_out[0]                                                                                                                                                                                                                                                                                                                                                                                  | infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_common.gen_common_container[0].gen_enabled_common.gthe4_common_wrapper_inst/common_inst/qpll1outclk_out[0]                                                      |             0.2 |
+| qpll1outrefclk_out[0]                                                                                                                                                                                                                                                                                                                                                                               | infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_common.gen_common_container[0].gen_enabled_common.gthe4_common_wrapper_inst/common_inst/qpll1outrefclk_out[0]                                                   |            10.0 |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------+-----------+
+| Name                               | Power (W) |
++------------------------------------+-----------+
+| top                                |     2.407 |
+|   datapath                         |     1.147 |
+|     rgen[0].region                 |     0.063 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.009 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[10].region                |     0.064 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.010 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[11].region                |     0.063 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.009 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[12].region                |     0.064 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.010 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[13].region                |     0.064 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.009 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[14].region                |     0.063 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.009 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[15].region                |     0.064 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.009 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.008 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[16].region                |     0.063 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.009 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[17].region                |     0.065 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.010 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.008 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.008 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[1].region                 |     0.064 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.010 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[2].region                 |     0.063 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.010 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[3].region                 |     0.063 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.009 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[4].region                 |     0.063 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.009 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.008 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[5].region                 |     0.063 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.009 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[6].region                 |     0.064 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.010 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[7].region                 |     0.063 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.009 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[8].region                 |     0.063 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.009 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|     rgen[9].region                 |     0.064 |
+|       bgen.buf_gen[0].cbuf_gen.buf |     0.009 |
+|       bgen.buf_gen[1].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[2].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[3].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[4].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[5].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[6].cbuf_gen.buf |     0.007 |
+|       bgen.buf_gen[7].cbuf_gen.buf |     0.007 |
+|   infra                            |     0.965 |
+|     clocks                         |     0.087 |
+|     dma                            |     0.753 |
+|       xdma                         |     0.747 |
+|     ipbus_transport_axi            |     0.024 |
+|       axi_bram_ctrl                |     0.003 |
+|       ram_to_trans                 |     0.021 |
+|     osc_clock                      |     0.099 |
+|       ibufds_osc                   |     0.003 |
+|   payload                          |     0.176 |
+|   ttc                              |     0.118 |
+|     clocks                         |     0.109 |
+|     l1agen                         |     0.001 |
+|     ttccmd                         |     0.006 |
+|       decode                       |     0.003 |
+|       gen_ext.buf                  |     0.003 |
++------------------------------------+-----------+
+
+

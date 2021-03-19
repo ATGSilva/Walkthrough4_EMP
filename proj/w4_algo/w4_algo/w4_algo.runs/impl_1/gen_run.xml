@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xcku15p-ffva1760-2-e" LaunchTime="1616163681">
+  <File Type="PA-TCL" Name="top.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="top_bus_skew_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="top_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="top_opt.dcp"/>
+  <File Type="OPT-DRC" Name="top_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="top.hwdef"/>
+  <File Type="PWROPT-DCP" Name="top_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="top_placed.dcp"/>
+  <File Type="PLACE-IO" Name="top_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="top_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="top_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="top_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="top_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="top_physopt.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="top_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="top_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="top_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="top_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="top_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="top_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="top_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="top_power_summary_routed.pb"/>
+  <File Type="BG-BIN" Name="top.bin"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="top_timing_summary_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="top.msk"/>
+  <File Type="CFI_FILE" Name="top.cfi"/>
+  <File Type="ROUTE-TIMING-PB" Name="top_timing_summary_routed.pb"/>
+  <File Type="BITSTR-RBT" Name="top.rbt"/>
+  <File Type="RNPI_FILE" Name="top.rnpi"/>
+  <File Type="ROUTE-TIMING-RPX" Name="top_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-NKY" Name="top.nky"/>
+  <File Type="BITSTR-BMM" Name="top_bd.bmm"/>
+  <File Type="ROUTE-CLK" Name="top_clock_utilization_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="top.mmi"/>
+  <File Type="ROUTE-BUS-SKEW" Name="top_bus_skew_routed.rpt"/>
+  <File Type="PDI-FILE" Name="top.pdi"/>
+  <File Type="RBD_FILE" Name="top.rbd"/>
+  <File Type="BG-BGN" Name="top.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="top.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BITSTR-LTX" Name="top.ltx"/>
+  <File Type="NPI_FILE" Name="top.npi"/>
+  <File Type="BG-DRC" Name="top.drc"/>
+  <File Type="RCFI_FILE" Name="top.rcfi"/>
+  <File Type="BG-BIT" Name="top.bit"/>
+  <File Type="ROUTE-STATUS-PB" Name="top_route_status.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="top_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="top_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="top.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="top_postroute_physopt.dcp"/>
+  <File Type="ROUTE-STATUS" Name="top_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="top_power_routed.rpx"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../../src/w4-algo-repo/w4-algo/firmware/hdl/dc_ku15p_decl.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/boards/serenity/dc_ku15p/firmware/hdl/emp_device_decl_sm1_v2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/gen_hdl/aurora_64b66b_descrambler.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/gen_hdl/aurora_64b66b_scrambler.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/gen_hdl/gtwizard_ultrascale_0_prbs_any.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/links_cs_interface.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/package_links.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/ucrc_pkg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/ucrc_par.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/ultrascale_fifo_stimulus_64b66b.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/bit_synchronizer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/aurora_descrambler.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/aurora_scrambler.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/tx_fifo_top.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/tx_fifo_pkg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/tx_fifo_cdc.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/rx_fifo_cdc.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/reset_synchronizer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/link_status.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/links_crc_tx.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/links_crc_rx.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/initialization_fsm.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/data_quality_with_idle.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/add_padding_and_prbs_data.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/gtwizard_ultrascale_top.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/common/firmware/hdl/async_mgt_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_core/firmware/hdl/ipbus_package.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_slaves/firmware/hdl/ipbus_reg_types.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_slaves/firmware/hdl/ipbus_ctrlreg_v.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_slaves/firmware/hdl/ipbus_reg_v.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_slaves/firmware/hdl/drp_decl.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_slaves/firmware/hdl/ipbus_drp_bridge.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_slaves/firmware/hdl/syncreg_r.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_slaves/firmware/hdl/syncreg_w.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_slaves/firmware/hdl/ipbus_syncreg_v.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/interface/firmware/hdl/emp_be_mgt.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/boards/serenity/common/firmware/hdl/emp_slim_top_decl.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/framework/firmware/hdl/emp_framework_decl.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/framework/firmware/hdl/emp_device_types.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/utils/firmware/hdl/ipbus_decode_top_emp_slim.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_core/firmware/hdl/ipbus_dc_node.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_core/firmware/hdl/ipbus_dc_fabric_sel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_core/firmware/hdl/ipbus_fabric_sel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_slaves/firmware/hdl/freq_ctr_div.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_slaves/firmware/hdl/ipbus_ported_dpram72.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/hdl/emp_data_types.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/emp_ttc_decl.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/hdl/usp/emp_ibufds_gt.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/hdl/ipbus_decode_emp_chan_buffer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/hdl/drp_mux.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_util/firmware/hdl/del_array.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/hdl/emp_chan_buffer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/bunch_ctr.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/hdl/align_mon.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/hdl/ipbus_decode_emp_region.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/hdl/emp_datapath_utils.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/hdl/emp_region.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/hdl/region_info.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/hdl/ipbus_decode_emp_datapath.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/hdl/emp_datapath.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_slaves/firmware/hdl/ipbus_freq_ctr.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/tmt_sync.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_slaves/firmware/hdl/ipbus_ported_sdpram72.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/ipbus_decode_emp_state_history.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/state_history.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/ttc_history_new.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/ttc_cmd_ctrs.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/ttc_ctrs.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/rng_n1024_r32_t5_k32_s1c48.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/rng_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/l1a_gen.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/ipbus_decode_emp_ttc.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/emp_ttc_cmd.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/legacy_ttc/sources/synth/ttc_codec/hdl/ttc_codec_pkg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/legacy_ttc/sources/synth/ttc_codec/hdl/dec/serialb_com.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/legacy_ttc/sources/synth/ttc_codec/hdl/dec/cdr2a_b_clk.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/legacy_ttc/sources/synth/ttc_codec/hdl/dec/ttc_decoder_core.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/legacy_ttc/sources/synth/ttc_codec/hdl/dec/ttc_decoder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/usp/emp_ttc_clocks.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/hdl/emp_ttc.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ctrl/firmware/hdl/ipbus_decode_emp_ctrl.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ctrl/firmware/hdl/usp/board_const_reg_legacy.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ctrl/firmware/hdl/emp_ctrl.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/info/firmware/hdl/emp_info.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_core/firmware/hdl/ipbus_trans_decl.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_core/firmware/hdl/transactor_cfg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_core/firmware/hdl/transactor_sm.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_core/firmware/hdl/transactor_if.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_core/firmware/hdl/transactor.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_transport_axi/firmware/hdl/ipbus_axi_decl.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_transport_axi/firmware/hdl/ipbus_transport_multibuffer_tx_dpram.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_transport_axi/firmware/hdl/ipbus_transport_multibuffer_rx_dpram.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_transport_axi/firmware/hdl/ipbus_transport_multibuffer_cdc.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_transport_axi/firmware/hdl/ipbus_transport_multibuffer_if.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_transport_axi/firmware/hdl/ipbus_transport_ram_if.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_transport_axi/firmware/hdl/ipbus_transport_axi_if.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_pcie/firmware/hdl/pcie_int_gen_msix.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_pcie/firmware/hdl/pcie_xdma_axi_usp_if.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_util/firmware/hdl/ipbus_clock_div.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/ipbus-firmware/components/ipbus_util/firmware/hdl/clocks/clocks_usp_serdes.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/utils/firmware/hdl/usp/emp_oscclk.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/utils/firmware/hdl/usp/emp_slim_infra.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/utils/firmware/hdl/emp_top.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/w4-algo-repo/w4-algo/firmware/hdl/emp_payload.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="top"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../../src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/pins_sm1_v2.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/pins_sm1_common.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/pins_common.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/boards/serenity/common/firmware/ucf/usp/bitstream_settings.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/boards/serenity/common/firmware/ucf/clock_constraints.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/utils/firmware/ucf/ttc_lvds_constraints.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/utils/firmware/ucf/slim_design_clock_constraints.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/ucf/region_constraints_toolbox.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/datapath/firmware/ucf/mgt_constraints_toolbox.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/components/ttc/firmware/ucf/ttc_clock_constraints.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/area_constraints.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design">
+      <Option Id="Directive">5</Option>
+    </Step>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1">
+      <Option Id="Directive">2</Option>
+    </Step>
+    <Step Id="route_design">
+      <Option Id="Directive">7</Option>
+    </Step>
+    <Step Id="post_route_phys_opt_design" EnableStepBool="1">
+      <Option Id="Directive">1</Option>
+    </Step>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="gtwizard_ultrascale_gty16g"/>
+  <BlockFileSet Type="BlockSrcs" Name="gtwizard_ultrascale_gth16g"/>
+  <BlockFileSet Type="BlockSrcs" Name="bram_rx_buffer"/>
+  <BlockFileSet Type="BlockSrcs" Name="xdma_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_bram_ctrl_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="myfunc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="tx_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="gtwizard_ultrascale_gty25g"/>
+</GenRun>

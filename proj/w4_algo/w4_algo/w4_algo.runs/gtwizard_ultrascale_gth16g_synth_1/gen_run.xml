@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="gtwizard_ultrascale_gth16g_synth_1" LaunchPart="xcku15p-ffva1760-2-e" LaunchTime="1616162242">
+  <File Type="RDS-UTIL" Name="gtwizard_ultrascale_gth16g_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="gtwizard_ultrascale_gth16g_utilization_synth.pb"/>
+  <File Type="RDS-RDS" Name="gtwizard_ultrascale_gth16g.vds"/>
+  <File Type="RDS-DCP" Name="gtwizard_ultrascale_gth16g.dcp"/>
+  <File Type="PA-TCL" Name="gtwizard_ultrascale_gth16g.tcl"/>
+  <File Type="REPORTS-TCL" Name="gtwizard_ultrascale_gth16g_reports.tcl"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/gtwizard_ultrascale_gth16g">
+    <File Path="$PSRCDIR/sources_1/ip/gtwizard_ultrascale_gth16g/gtwizard_ultrascale_gth16g.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/gth_16g/firmware/cgn/gtwizard_ultrascale_gth16g/gtwizard_ultrascale_gth16g.xci"/>
+        <Attr Name="ImportTime" Val="1615902448"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="gtwizard_ultrascale_gth16g"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/gtwizard_ultrascale_gth16g">
+    <File Path="$PSRCDIR/sources_1/ip/gtwizard_ultrascale_gth16g/gtwizard_ultrascale_gth16g.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../src/emp-fwk/components/links/be_mgt/gth_16g/firmware/cgn/gtwizard_ultrascale_gth16g/gtwizard_ultrascale_gth16g.xci"/>
+        <Attr Name="ImportTime" Val="1615902448"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="gtwizard_ultrascale_gth16g"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

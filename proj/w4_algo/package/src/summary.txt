@@ -1,0 +1,8 @@
+build host: excession_phy_bris_ac_uk
+md5: fbfbeedd1aec6b1456ac07e759d1ce416e4f2055
+name: w4_algo
+time: Fri, 19 Mar 2021 14:46:31 +0000
+toolset: vivado
+topCmp: w4-algo
+topDep: top.dep
+topPkg: w4-algo-repo

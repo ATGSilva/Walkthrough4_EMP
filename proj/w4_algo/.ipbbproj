@@ -1,0 +1,5 @@
+name: w4_algo
+toolset: vivado
+topCmp: w4-algo
+topDep: top.dep
+topPkg: w4-algo-repo

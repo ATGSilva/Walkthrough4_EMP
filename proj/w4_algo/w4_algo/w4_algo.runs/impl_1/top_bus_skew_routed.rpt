@@ -1,0 +1,16 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date              : Fri Mar 19 14:39:18 2021
+| Host              : excession.phy.bris.ac.uk running 64-bit Scientific Linux release 7.9 (Nitrogen)
+| Command           : report_bus_skew -warn_on_violation -file top_bus_skew_routed.rpt -pb top_bus_skew_routed.pb -rpx top_bus_skew_routed.rpx
+| Design            : top
+| Device            : xcku15p-ffva1760
+| Speed File        : -2  PRODUCTION 1.27 08-13-2019
+| Temperature Grade : E
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Mar 19 14:41:55 2021
+# Process ID: 820
+# Current directory: /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo
+# Command line: vivado -mode tcl -log vivado_bitfile.log -journal vivado_bitfile.jou
+# Log file: /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/vivado_bitfile.log
+# Journal file: /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/vivado_bitfile.jou
+#-----------------------------------------------------------
+open_project /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.xpr
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+quit

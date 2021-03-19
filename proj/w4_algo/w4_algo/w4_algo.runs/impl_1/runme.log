@@ -1,0 +1,932 @@
+
+*** Running vivado
+    with args -log top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/user_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/CAD/Xilinx/2019.2/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:myfunc:1.0'. The one found in IP location '/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/user_ip_repo/xilinx_com_hls_myfunc_1_0_1' will take precedence over the same IP in location /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/user_ip_repo/xilinx_com_hls_myfunc_1_0
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1633.492 ; gain = 34.695 ; free physical = 12076 ; free virtual = 14775
+Command: link_design -top top -part xcku15p-ffva1760-2-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xcku15p-ffva1760-2-e
+INFO: [Project 1-454] Reading design checkpoint '/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/xdma_0.dcp' for cell 'infra/dma/xdma'
+INFO: [Project 1-454] Reading design checkpoint '/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/axi_bram_ctrl_0/axi_bram_ctrl_0.dcp' for cell 'infra/ipbus_transport_axi/axi_bram_ctrl'
+INFO: [Project 1-454] Reading design checkpoint '/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/myfunc_0/myfunc_0.dcp' for cell 'payload/gen[0].gen[0].plusseven0'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2742.934 ; gain = 0.000 ; free physical = 10955 ; free virtual = 13666
+INFO: [Netlist 29-17] Analyzing 2099 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/ip_0/synth/xdma_0_pcie4_ip_gt.xdc] for cell 'infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst'
+Finished Parsing XDC File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/ip_0/synth/xdma_0_pcie4_ip_gt.xdc] for cell 'infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst'
+Parsing XDC File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/source/ip_pcie4_uscale_plus_x1y0.xdc] for cell 'infra/dma/xdma/inst/pcie4_ip_i/inst'
+Finished Parsing XDC File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/source/ip_pcie4_uscale_plus_x1y0.xdc] for cell 'infra/dma/xdma/inst/pcie4_ip_i/inst'
+Parsing XDC File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc] for cell 'infra/dma/xdma/inst'
+Finished Parsing XDC File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc] for cell 'infra/dma/xdma/inst'
+Parsing XDC File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie4_uscaleplus_ip.xdc] for cell 'infra/dma/xdma/inst'
+Finished Parsing XDC File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie4_uscaleplus_ip.xdc] for cell 'infra/dma/xdma/inst'
+Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/pins_sm1_v2.tcl]
+Finished Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/pins_sm1_v2.tcl]
+Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/pins_sm1_common.tcl]
+Finished Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/pins_sm1_common.tcl]
+Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/pins_common.tcl]
+Finished Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/pins_common.tcl]
+Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/common/firmware/ucf/usp/bitstream_settings.tcl]
+Finished Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/common/firmware/ucf/usp/bitstream_settings.tcl]
+Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/common/firmware/ucf/clock_constraints.tcl]
+Finished Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/common/firmware/ucf/clock_constraints.tcl]
+Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/utils/firmware/ucf/ttc_lvds_constraints.tcl]
+Finished Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/utils/firmware/ucf/ttc_lvds_constraints.tcl]
+Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/utils/firmware/ucf/slim_design_clock_constraints.tcl]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/utils/firmware/ucf/slim_design_clock_constraints.tcl:6]
+WARNING: [Timing 38-3] User defined clock exists on pin infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK [See /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/source/ip_pcie4_uscale_plus_x1y0.xdc:120] and will prevent any subsequent automatic derivation of generated clocks on that pin. If the user defined clock specifies '-add', any existing auto-derived clocks on that pin are retained. [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/utils/firmware/ucf/slim_design_clock_constraints.tcl:6]
+INFO: [Timing 38-2] Deriving generated clocks [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/utils/firmware/ucf/slim_design_clock_constraints.tcl:6]
+create_generated_clock: Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 3585.508 ; gain = 550.551 ; free physical = 10283 ; free virtual = 13012
+WARNING: [Vivado 12-3521] Clock specified in more than one group: ipbus_clk [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/utils/firmware/ucf/slim_design_clock_constraints.tcl:24]
+Finished Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/utils/firmware/ucf/slim_design_clock_constraints.tcl]
+Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/datapath/firmware/ucf/region_constraints_toolbox.tcl]
+Finished Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/datapath/firmware/ucf/region_constraints_toolbox.tcl]
+Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/datapath/firmware/ucf/mgt_constraints_toolbox.tcl]
+Finished Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/datapath/firmware/ucf/mgt_constraints_toolbox.tcl]
+Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/ttc/firmware/ucf/ttc_clock_constraints.tcl]
+Finished Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/ttc/firmware/ucf/ttc_clock_constraints.tcl]
+Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/area_constraints.tcl]
+Clock region boundaries {0 0} {3 10}
+FPGA boundaries (RPM coords) {8 2} {2953 1362}
+Clock region bounds: {0 0} {3 10}
+Creating pblock 'quad_L0' in clock region X0Y0 (RPM_X < 1280)
+PS8 PS8_X0Y0:PS8_X0Y0
+No elements in pblock quad_L0
+Creating pblock 'quad_L1' in clock region X0Y1 (RPM_X < 1280)
+WARNING: [Vivado 12-3731] No sites matched '*' [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/area_constraints.tcl:50]
+Creating pblock 'quad_L2' in clock region X0Y2 (RPM_X < 1280)
+WARNING: [Vivado 12-3731] No sites matched '*' [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/area_constraints.tcl:50]
+Creating pblock 'quad_L3' in clock region X0Y3 (RPM_X < 1280)
+SLICE SLICE_X0Y180:SLICE_X20Y239 DSP48E2 DSP48E2_X0Y72:DSP48E2_X1Y95 RAMB18 RAMB18_X0Y72:RAMB18_X1Y95 RAMB36 RAMB36_X0Y36:RAMB36_X1Y47 URAM288 URAM288_X0Y0:URAM288_X0Y15 BUFCE_LEAF BUFCE_LEAF_X0Y12:BUFCE_LEAF_X119Y15 BUFCE_ROW_FSR BUFCE_ROW_FSR_X0Y3:BUFCE_ROW_FSR_X23Y3 HARD_SYNC HARD_SYNC_X0Y6:HARD_SYNC_X3Y7 BUFG_GT BUFG_GT_X0Y72:BUFG_GT_X0Y95 BUFG_GT_SYNC BUFG_GT_SYNC_X0Y45:BUFG_GT_SYNC_X0Y59 GTYE4_COMMON GTYE4_COMMON_X0Y0:GTYE4_COMMON_X0Y0 GTYE4_CHANNEL GTYE4_CHANNEL_X0Y0:GTYE4_CHANNEL_X0Y3 CMACE4 CMACE4_X0Y0:CMACE4_X0Y0
+Creating pblock 'quad_L4' in clock region X0Y4 (RPM_X < 1280)
+SLICE SLICE_X0Y240:SLICE_X20Y299 DSP48E2 DSP48E2_X0Y96:DSP48E2_X1Y119 RAMB18 RAMB18_X0Y96:RAMB18_X1Y119 RAMB36 RAMB36_X0Y48:RAMB36_X1Y59 URAM288 URAM288_X0Y16:URAM288_X0Y31 BUFCE_LEAF BUFCE_LEAF_X0Y16:BUFCE_LEAF_X119Y19 BUFCE_ROW_FSR BUFCE_ROW_FSR_X0Y4:BUFCE_ROW_FSR_X23Y4 HARD_SYNC HARD_SYNC_X0Y8:HARD_SYNC_X3Y9 BUFG_GT BUFG_GT_X0Y96:BUFG_GT_X0Y119 BUFG_GT_SYNC BUFG_GT_SYNC_X0Y60:BUFG_GT_SYNC_X0Y74 GTYE4_COMMON GTYE4_COMMON_X0Y1:GTYE4_COMMON_X0Y1 GTYE4_CHANNEL GTYE4_CHANNEL_X0Y4:GTYE4_CHANNEL_X0Y7 PCIE40E4 PCIE40E4_X0Y2:PCIE40E4_X0Y2
+Creating pblock 'quad_L5' in clock region X0Y5 (RPM_X < 1280)
+SLICE SLICE_X0Y300:SLICE_X20Y359 DSP48E2 DSP48E2_X0Y120:DSP48E2_X1Y143 RAMB18 RAMB18_X0Y120:RAMB18_X1Y143 RAMB36 RAMB36_X0Y60:RAMB36_X1Y71 URAM288 URAM288_X0Y32:URAM288_X0Y47 BUFCE_LEAF BUFCE_LEAF_X0Y20:BUFCE_LEAF_X119Y23 BUFCE_ROW_FSR BUFCE_ROW_FSR_X0Y5:BUFCE_ROW_FSR_X23Y5 HARD_SYNC HARD_SYNC_X0Y10:HARD_SYNC_X3Y11 BUFG_GT BUFG_GT_X0Y120:BUFG_GT_X0Y143 BUFG_GT_SYNC BUFG_GT_SYNC_X0Y75:BUFG_GT_SYNC_X0Y89 GTYE4_COMMON GTYE4_COMMON_X0Y2:GTYE4_COMMON_X0Y2 GTYE4_CHANNEL GTYE4_CHANNEL_X0Y8:GTYE4_CHANNEL_X0Y11 ILKNE4 ILKNE4_X0Y0:ILKNE4_X0Y0
+Creating pblock 'quad_L6' in clock region X0Y6 (RPM_X < 1280)
+SLICE SLICE_X0Y360:SLICE_X20Y419 DSP48E2 DSP48E2_X0Y144:DSP48E2_X1Y167 RAMB18 RAMB18_X0Y144:RAMB18_X1Y167 RAMB36 RAMB36_X0Y72:RAMB36_X1Y83 URAM288 URAM288_X0Y48:URAM288_X0Y63 BUFCE_LEAF BUFCE_LEAF_X0Y24:BUFCE_LEAF_X119Y27 BUFCE_ROW_FSR BUFCE_ROW_FSR_X0Y6:BUFCE_ROW_FSR_X23Y6 HARD_SYNC HARD_SYNC_X0Y12:HARD_SYNC_X3Y13 BUFG_GT BUFG_GT_X0Y144:BUFG_GT_X0Y167 BUFG_GT_SYNC BUFG_GT_SYNC_X0Y90:BUFG_GT_SYNC_X0Y104 GTYE4_COMMON GTYE4_COMMON_X0Y3:GTYE4_COMMON_X0Y3 GTYE4_CHANNEL GTYE4_CHANNEL_X0Y12:GTYE4_CHANNEL_X0Y15 CMACE4 CMACE4_X0Y1:CMACE4_X0Y1
+Creating pblock 'quad_L7' in clock region X0Y7 (RPM_X < 1280)
+SLICE SLICE_X0Y420:SLICE_X20Y479 DSP48E2 DSP48E2_X0Y168:DSP48E2_X1Y191 RAMB18 RAMB18_X0Y168:RAMB18_X1Y191 RAMB36 RAMB36_X0Y84:RAMB36_X1Y95 URAM288 URAM288_X0Y64:URAM288_X0Y79 BUFCE_LEAF BUFCE_LEAF_X0Y28:BUFCE_LEAF_X119Y31 BUFCE_ROW_FSR BUFCE_ROW_FSR_X0Y7:BUFCE_ROW_FSR_X23Y7 HARD_SYNC HARD_SYNC_X0Y14:HARD_SYNC_X3Y15 BUFG_GT BUFG_GT_X0Y168:BUFG_GT_X0Y191 BUFG_GT_SYNC BUFG_GT_SYNC_X0Y105:BUFG_GT_SYNC_X0Y119 GTYE4_COMMON GTYE4_COMMON_X0Y4:GTYE4_COMMON_X0Y4 GTYE4_CHANNEL GTYE4_CHANNEL_X0Y16:GTYE4_CHANNEL_X0Y19 PCIE40E4 PCIE40E4_X0Y3:PCIE40E4_X0Y3
+Creating pblock 'quad_L8' in clock region X0Y8 (RPM_X < 1280)
+SLICE SLICE_X0Y480:SLICE_X20Y539 DSP48E2 DSP48E2_X0Y192:DSP48E2_X1Y215 RAMB18 RAMB18_X0Y192:RAMB18_X1Y215 RAMB36 RAMB36_X0Y96:RAMB36_X1Y107 URAM288 URAM288_X0Y80:URAM288_X0Y95 BUFCE_LEAF BUFCE_LEAF_X0Y32:BUFCE_LEAF_X119Y35 BUFCE_ROW_FSR BUFCE_ROW_FSR_X0Y8:BUFCE_ROW_FSR_X23Y8 HARD_SYNC HARD_SYNC_X0Y16:HARD_SYNC_X3Y17 BUFG_GT BUFG_GT_X0Y192:BUFG_GT_X0Y215 BUFG_GT_SYNC BUFG_GT_SYNC_X0Y120:BUFG_GT_SYNC_X0Y134 GTYE4_COMMON GTYE4_COMMON_X0Y5:GTYE4_COMMON_X0Y5 GTYE4_CHANNEL GTYE4_CHANNEL_X0Y20:GTYE4_CHANNEL_X0Y23 CMACE4 CMACE4_X0Y2:CMACE4_X0Y2
+Creating pblock 'quad_L9' in clock region X0Y9 (RPM_X < 1280)
+SLICE SLICE_X0Y540:SLICE_X20Y599 DSP48E2 DSP48E2_X0Y216:DSP48E2_X1Y239 RAMB18 RAMB18_X0Y216:RAMB18_X1Y239 RAMB36 RAMB36_X0Y108:RAMB36_X1Y119 URAM288 URAM288_X0Y96:URAM288_X0Y111 BUFCE_LEAF BUFCE_LEAF_X0Y36:BUFCE_LEAF_X119Y39 BUFCE_ROW_FSR BUFCE_ROW_FSR_X0Y9:BUFCE_ROW_FSR_X23Y9 HARD_SYNC HARD_SYNC_X0Y18:HARD_SYNC_X3Y19 BUFG_GT BUFG_GT_X0Y216:BUFG_GT_X0Y239 BUFG_GT_SYNC BUFG_GT_SYNC_X0Y135:BUFG_GT_SYNC_X0Y149 GTYE4_COMMON GTYE4_COMMON_X0Y6:GTYE4_COMMON_X0Y6 GTYE4_CHANNEL GTYE4_CHANNEL_X0Y24:GTYE4_CHANNEL_X0Y27 ILKNE4 ILKNE4_X0Y2:ILKNE4_X0Y2
+Creating pblock 'quad_L10' in clock region X0Y10 (RPM_X < 1280)
+SLICE SLICE_X0Y600:SLICE_X20Y659 DSP48E2 DSP48E2_X0Y240:DSP48E2_X1Y263 RAMB18 RAMB18_X0Y240:RAMB18_X1Y263 RAMB36 RAMB36_X0Y120:RAMB36_X1Y131 URAM288 URAM288_X0Y112:URAM288_X0Y127 BUFCE_LEAF BUFCE_LEAF_X0Y40:BUFCE_LEAF_X119Y43 BUFCE_ROW_FSR BUFCE_ROW_FSR_X0Y10:BUFCE_ROW_FSR_X23Y10 HARD_SYNC HARD_SYNC_X0Y20:HARD_SYNC_X3Y21 BUFG_GT BUFG_GT_X0Y240:BUFG_GT_X0Y263 BUFG_GT_SYNC BUFG_GT_SYNC_X0Y150:BUFG_GT_SYNC_X0Y164 GTYE4_COMMON GTYE4_COMMON_X0Y7:GTYE4_COMMON_X0Y7 GTYE4_CHANNEL GTYE4_CHANNEL_X0Y28:GTYE4_CHANNEL_X0Y31 CMACE4 CMACE4_X0Y3:CMACE4_X0Y3
+Creating pblock 'quad_R0' in clock region X3Y0 (RPM_X > 2503)
+SLICE SLICE_X84Y0:SLICE_X104Y59 RAMB18 RAMB18_X6Y0:RAMB18_X7Y23 RAMB36 RAMB36_X6Y0:RAMB36_X7Y11 DSP48E2 DSP48E2_X7Y0:DSP48E2_X7Y23 BUFCE_LEAF BUFCE_LEAF_X408Y0:BUFCE_LEAF_X519Y3 BUFCE_ROW_FSR BUFCE_ROW_FSR_X77Y0:BUFCE_ROW_FSR_X96Y0 HARD_SYNC HARD_SYNC_X12Y0:HARD_SYNC_X15Y1 PCIE40E4 PCIE40E4_X1Y0:PCIE40E4_X1Y0 GTHE4_CHANNEL GTHE4_CHANNEL_X0Y0:GTHE4_CHANNEL_X0Y3 GTHE4_COMMON GTHE4_COMMON_X0Y0:GTHE4_COMMON_X0Y0 BUFG_GT BUFG_GT_X1Y0:BUFG_GT_X1Y23 BUFG_GT_SYNC BUFG_GT_SYNC_X1Y0:BUFG_GT_SYNC_X1Y14
+Creating pblock 'quad_R1' in clock region X3Y1 (RPM_X > 2503)
+SLICE SLICE_X84Y60:SLICE_X104Y119 RAMB18 RAMB18_X6Y24:RAMB18_X7Y47 RAMB36 RAMB36_X6Y12:RAMB36_X7Y23 DSP48E2 DSP48E2_X7Y24:DSP48E2_X7Y47 BUFCE_LEAF BUFCE_LEAF_X408Y4:BUFCE_LEAF_X519Y7 BUFCE_ROW_FSR BUFCE_ROW_FSR_X77Y1:BUFCE_ROW_FSR_X96Y1 HARD_SYNC HARD_SYNC_X12Y2:HARD_SYNC_X15Y3 CONFIG_SITE CONFIG_SITE_X0Y0:CONFIG_SITE_X0Y0 GTHE4_CHANNEL GTHE4_CHANNEL_X0Y4:GTHE4_CHANNEL_X0Y7 GTHE4_COMMON GTHE4_COMMON_X0Y1:GTHE4_COMMON_X0Y1 BUFG_GT BUFG_GT_X1Y24:BUFG_GT_X1Y47 BUFG_GT_SYNC BUFG_GT_SYNC_X1Y15:BUFG_GT_SYNC_X1Y29
+Creating pblock 'quad_R2' in clock region X3Y2 (RPM_X > 2503)
+SLICE SLICE_X84Y120:SLICE_X104Y179 RAMB18 RAMB18_X6Y48:RAMB18_X7Y71 RAMB36 RAMB36_X6Y24:RAMB36_X7Y35 DSP48E2 DSP48E2_X7Y48:DSP48E2_X7Y71 SYSMONE4 SYSMONE4_X0Y0:SYSMONE4_X0Y0 BUFCE_LEAF BUFCE_LEAF_X408Y8:BUFCE_LEAF_X519Y11 BUFCE_ROW_FSR BUFCE_ROW_FSR_X77Y2:BUFCE_ROW_FSR_X96Y2 HARD_SYNC HARD_SYNC_X12Y4:HARD_SYNC_X15Y5 CFGIO_SITE CFGIO_SITE_X0Y0:CFGIO_SITE_X0Y0 GTHE4_CHANNEL GTHE4_CHANNEL_X0Y8:GTHE4_CHANNEL_X0Y11 GTHE4_COMMON GTHE4_COMMON_X0Y2:GTHE4_COMMON_X0Y2 BUFG_GT BUFG_GT_X1Y48:BUFG_GT_X1Y71 BUFG_GT_SYNC BUFG_GT_SYNC_X1Y30:BUFG_GT_SYNC_X1Y44
+Creating pblock 'quad_R3' in clock region X3Y3 (RPM_X > 2503)
+SLICE SLICE_X84Y180:SLICE_X104Y239 RAMB18 RAMB18_X6Y72:RAMB18_X7Y95 RAMB36 RAMB36_X6Y36:RAMB36_X7Y47 DSP48E2 DSP48E2_X7Y72:DSP48E2_X7Y95 BUFCE_LEAF BUFCE_LEAF_X408Y12:BUFCE_LEAF_X519Y15 BUFCE_ROW_FSR BUFCE_ROW_FSR_X77Y3:BUFCE_ROW_FSR_X96Y3 HARD_SYNC HARD_SYNC_X12Y6:HARD_SYNC_X15Y7 PCIE40E4 PCIE40E4_X1Y1:PCIE40E4_X1Y1 GTHE4_CHANNEL GTHE4_CHANNEL_X0Y12:GTHE4_CHANNEL_X0Y15 GTHE4_COMMON GTHE4_COMMON_X0Y3:GTHE4_COMMON_X0Y3 BUFG_GT BUFG_GT_X1Y72:BUFG_GT_X1Y95 BUFG_GT_SYNC BUFG_GT_SYNC_X1Y45:BUFG_GT_SYNC_X1Y59
+Creating pblock 'quad_R4' in clock region X3Y4 (RPM_X > 2503)
+SLICE SLICE_X84Y240:SLICE_X104Y299 RAMB18 RAMB18_X6Y96:RAMB18_X7Y119 RAMB36 RAMB36_X6Y48:RAMB36_X7Y59 DSP48E2 DSP48E2_X7Y96:DSP48E2_X7Y119 BUFCE_LEAF BUFCE_LEAF_X408Y16:BUFCE_LEAF_X519Y19 BUFCE_ROW_FSR BUFCE_ROW_FSR_X77Y4:BUFCE_ROW_FSR_X96Y4 HARD_SYNC HARD_SYNC_X12Y8:HARD_SYNC_X15Y9 PCIE40E4 PCIE40E4_X1Y2:PCIE40E4_X1Y2 GTHE4_CHANNEL GTHE4_CHANNEL_X0Y16:GTHE4_CHANNEL_X0Y19 GTHE4_COMMON GTHE4_COMMON_X0Y4:GTHE4_COMMON_X0Y4 BUFG_GT BUFG_GT_X1Y96:BUFG_GT_X1Y119 BUFG_GT_SYNC BUFG_GT_SYNC_X1Y60:BUFG_GT_SYNC_X1Y74
+Creating pblock 'quad_R5' in clock region X3Y5 (RPM_X > 2503)
+SLICE SLICE_X84Y300:SLICE_X104Y359 RAMB18 RAMB18_X6Y120:RAMB18_X7Y143 RAMB36 RAMB36_X6Y60:RAMB36_X7Y71 DSP48E2 DSP48E2_X7Y120:DSP48E2_X7Y143 BUFCE_LEAF BUFCE_LEAF_X408Y20:BUFCE_LEAF_X519Y23 BUFCE_ROW_FSR BUFCE_ROW_FSR_X77Y5:BUFCE_ROW_FSR_X96Y5 HARD_SYNC HARD_SYNC_X12Y10:HARD_SYNC_X15Y11 ILKNE4 ILKNE4_X1Y0:ILKNE4_X1Y0 GTHE4_CHANNEL GTHE4_CHANNEL_X0Y20:GTHE4_CHANNEL_X0Y23 GTHE4_COMMON GTHE4_COMMON_X0Y5:GTHE4_COMMON_X0Y5 BUFG_GT BUFG_GT_X1Y120:BUFG_GT_X1Y143 BUFG_GT_SYNC BUFG_GT_SYNC_X1Y75:BUFG_GT_SYNC_X1Y89
+Creating pblock 'quad_R6' in clock region X3Y6 (RPM_X > 2503)
+SLICE SLICE_X84Y360:SLICE_X104Y419 RAMB18 RAMB18_X6Y144:RAMB18_X7Y167 RAMB36 RAMB36_X6Y72:RAMB36_X7Y83 DSP48E2 DSP48E2_X7Y144:DSP48E2_X7Y167 HDIOLOGIC_M HDIOLOGIC_M_X0Y0:HDIOLOGIC_M_X0Y11 HDIOLOGIC_S HDIOLOGIC_S_X0Y0:HDIOLOGIC_S_X0Y11 HDIOBDIFFINBUF HDIOBDIFFINBUF_X0Y0:HDIOBDIFFINBUF_X0Y11 IOB IOB_X1Y312:IOB_X1Y349 HDIO_BIAS HDIO_BIAS_X0Y0:HDIO_BIAS_X0Y0 BUFCE_LEAF BUFCE_LEAF_X408Y24:BUFCE_LEAF_X519Y27 BUFCE_ROW_FSR BUFCE_ROW_FSR_X77Y6:BUFCE_ROW_FSR_X96Y6 HARD_SYNC HARD_SYNC_X12Y12:HARD_SYNC_X15Y13 BUFGCE_HDIO BUFGCE_HDIO_X0Y0:BUFGCE_HDIO_X1Y1 HDIO_VREF HDIO_VREF_X0Y0:HDIO_VREF_X0Y0 GTHE4_CHANNEL GTHE4_CHANNEL_X0Y24:GTHE4_CHANNEL_X0Y27 GTHE4_COMMON GTHE4_COMMON_X0Y6:GTHE4_COMMON_X0Y6 BUFG_GT BUFG_GT_X1Y144:BUFG_GT_X1Y167 BUFG_GT_SYNC BUFG_GT_SYNC_X1Y90:BUFG_GT_SYNC_X1Y104
+Creating pblock 'quad_R7' in clock region X3Y7 (RPM_X > 2503)
+SLICE SLICE_X84Y420:SLICE_X104Y479 RAMB18 RAMB18_X6Y168:RAMB18_X7Y191 RAMB36 RAMB36_X6Y84:RAMB36_X7Y95 DSP48E2 DSP48E2_X7Y168:DSP48E2_X7Y191 HDIOLOGIC_M HDIOLOGIC_M_X0Y12:HDIOLOGIC_M_X0Y23 HDIOLOGIC_S HDIOLOGIC_S_X0Y12:HDIOLOGIC_S_X0Y23 HDIOBDIFFINBUF HDIOBDIFFINBUF_X0Y12:HDIOBDIFFINBUF_X0Y23 IOB IOB_X1Y364:IOB_X1Y401 HDIO_BIAS HDIO_BIAS_X0Y1:HDIO_BIAS_X0Y1 BUFCE_LEAF BUFCE_LEAF_X408Y28:BUFCE_LEAF_X519Y31 BUFCE_ROW_FSR BUFCE_ROW_FSR_X77Y7:BUFCE_ROW_FSR_X96Y7 HARD_SYNC HARD_SYNC_X12Y14:HARD_SYNC_X15Y15 BUFGCE_HDIO BUFGCE_HDIO_X0Y2:BUFGCE_HDIO_X1Y3 HDIO_VREF HDIO_VREF_X0Y1:HDIO_VREF_X0Y1 GTHE4_CHANNEL GTHE4_CHANNEL_X0Y28:GTHE4_CHANNEL_X0Y31 GTHE4_COMMON GTHE4_COMMON_X0Y7:GTHE4_COMMON_X0Y7 BUFG_GT BUFG_GT_X1Y168:BUFG_GT_X1Y191 BUFG_GT_SYNC BUFG_GT_SYNC_X1Y105:BUFG_GT_SYNC_X1Y119
+Creating pblock 'quad_R8' in clock region X3Y8 (RPM_X > 2503)
+SLICE SLICE_X84Y480:SLICE_X104Y539 RAMB18 RAMB18_X6Y192:RAMB18_X7Y215 RAMB36 RAMB36_X6Y96:RAMB36_X7Y107 DSP48E2 DSP48E2_X7Y192:DSP48E2_X7Y215 BUFCE_LEAF BUFCE_LEAF_X408Y32:BUFCE_LEAF_X519Y35 BUFCE_ROW_FSR BUFCE_ROW_FSR_X77Y8:BUFCE_ROW_FSR_X96Y8 HARD_SYNC HARD_SYNC_X12Y16:HARD_SYNC_X15Y17 ILKNE4 ILKNE4_X1Y1:ILKNE4_X1Y1 GTHE4_CHANNEL GTHE4_CHANNEL_X0Y32:GTHE4_CHANNEL_X0Y35 GTHE4_COMMON GTHE4_COMMON_X0Y8:GTHE4_COMMON_X0Y8 BUFG_GT BUFG_GT_X1Y192:BUFG_GT_X1Y215 BUFG_GT_SYNC BUFG_GT_SYNC_X1Y120:BUFG_GT_SYNC_X1Y134
+Creating pblock 'quad_R9' in clock region X3Y9 (RPM_X > 2503)
+SLICE SLICE_X84Y540:SLICE_X104Y599 RAMB18 RAMB18_X6Y216:RAMB18_X7Y239 RAMB36 RAMB36_X6Y108:RAMB36_X7Y119 DSP48E2 DSP48E2_X7Y216:DSP48E2_X7Y239 HDIOLOGIC_M HDIOLOGIC_M_X0Y24:HDIOLOGIC_M_X0Y35 HDIOLOGIC_S HDIOLOGIC_S_X0Y24:HDIOLOGIC_S_X0Y35 HDIOBDIFFINBUF HDIOBDIFFINBUF_X0Y24:HDIOBDIFFINBUF_X0Y35 IOB IOB_X1Y468:IOB_X1Y505 HDIO_BIAS HDIO_BIAS_X0Y2:HDIO_BIAS_X0Y2 BUFCE_LEAF BUFCE_LEAF_X408Y36:BUFCE_LEAF_X519Y39 BUFCE_ROW_FSR BUFCE_ROW_FSR_X77Y9:BUFCE_ROW_FSR_X96Y9 HARD_SYNC HARD_SYNC_X12Y18:HARD_SYNC_X15Y19 BUFGCE_HDIO BUFGCE_HDIO_X0Y4:BUFGCE_HDIO_X1Y5 HDIO_VREF HDIO_VREF_X0Y2:HDIO_VREF_X0Y2 GTHE4_CHANNEL GTHE4_CHANNEL_X0Y36:GTHE4_CHANNEL_X0Y39 GTHE4_COMMON GTHE4_COMMON_X0Y9:GTHE4_COMMON_X0Y9 BUFG_GT BUFG_GT_X1Y216:BUFG_GT_X1Y239 BUFG_GT_SYNC BUFG_GT_SYNC_X1Y135:BUFG_GT_SYNC_X1Y149
+Creating pblock 'quad_R10' in clock region X3Y10 (RPM_X > 2503)
+SLICE SLICE_X84Y600:SLICE_X104Y659 RAMB18 RAMB18_X6Y240:RAMB18_X7Y263 RAMB36 RAMB36_X6Y120:RAMB36_X7Y131 DSP48E2 DSP48E2_X7Y240:DSP48E2_X7Y263 HDIOLOGIC_M HDIOLOGIC_M_X0Y36:HDIOLOGIC_M_X0Y47 HDIOLOGIC_S HDIOLOGIC_S_X0Y36:HDIOLOGIC_S_X0Y47 HDIOBDIFFINBUF HDIOBDIFFINBUF_X0Y36:HDIOBDIFFINBUF_X0Y47 IOB IOB_X1Y520:IOB_X1Y557 HDIO_BIAS HDIO_BIAS_X0Y3:HDIO_BIAS_X0Y3 BUFCE_LEAF BUFCE_LEAF_X408Y40:BUFCE_LEAF_X519Y43 BUFCE_ROW_FSR BUFCE_ROW_FSR_X77Y10:BUFCE_ROW_FSR_X96Y10 HARD_SYNC HARD_SYNC_X12Y20:HARD_SYNC_X15Y21 BUFGCE_HDIO BUFGCE_HDIO_X0Y6:BUFGCE_HDIO_X1Y7 HDIO_VREF HDIO_VREF_X0Y3:HDIO_VREF_X0Y3 GTHE4_CHANNEL GTHE4_CHANNEL_X0Y40:GTHE4_CHANNEL_X0Y43 GTHE4_COMMON GTHE4_COMMON_X0Y10:GTHE4_COMMON_X0Y10 BUFG_GT BUFG_GT_X1Y240:BUFG_GT_X1Y263 BUFG_GT_SYNC BUFG_GT_SYNC_X1Y150:BUFG_GT_SYNC_X1Y164
+Created 11 quads
+Populating quad_R1 with region 0
+Populating quad_R2 with region 1
+Populating quad_R3 with region 2
+Populating quad_R4 with region 3
+Populating quad_R5 with region 4
+Populating quad_R6 with region 5
+Populating quad_R7 with region 6
+Populating quad_R8 with region 7
+Populating quad_R9 with region 8
+Populating quad_R10 with region 9
+Populating quad_L10 with region 10
+Populating quad_L9 with region 11
+Populating quad_L8 with region 12
+Populating quad_L7 with region 13
+Populating quad_L6 with region 14
+Populating quad_L5 with region 15
+Populating quad_L4 with region 16
+Populating quad_L3 with region 17
+Adding to payload rectangles SLICE_X21Y180:SLICE_X83Y659 DSP48E2_X2Y72:DSP48E2_X6Y263 RAMB18_X2Y72:RAMB18_X5Y263 RAMB36_X2Y36:RAMB36_X5Y131
+Finished Sourcing Tcl File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/boards/serenity/dc_ku15p/firmware/ucf/area_constraints.tcl]
+Parsing XDC File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/xdma_0_pcie4_ip_board.xdc] for cell 'infra/dma/xdma/inst/pcie4_ip_i/inst'
+Finished Parsing XDC File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/xdma_0_pcie4_ip_board.xdc] for cell 'infra/dma/xdma/inst/pcie4_ip_i/inst'
+Parsing XDC File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/synth/xdma_0_pcie4_ip_late.xdc] for cell 'infra/dma/xdma/inst/pcie4_ip_i/inst'
+Finished Parsing XDC File [/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/synth/xdma_0_pcie4_ip_late.xdc] for cell 'infra/dma/xdma/inst/pcie4_ip_i/inst'
+Sourcing Tcl File [/software/CAD/Xilinx/2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'infra/dma/xdma/inst/pcie4_ip_i/inst/user_lnk_up_cdc'
+Finished Sourcing Tcl File [/software/CAD/Xilinx/2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'infra/dma/xdma/inst/pcie4_ip_i/inst/user_lnk_up_cdc'
+Sourcing Tcl File [/software/CAD/Xilinx/2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'infra/dma/xdma/inst/pcie4_ip_i/inst/user_reset_cdc'
+Finished Sourcing Tcl File [/software/CAD/Xilinx/2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'infra/dma/xdma/inst/pcie4_ip_i/inst/user_reset_cdc'
+Sourcing Tcl File [/software/CAD/Xilinx/2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'infra/dma/xdma/inst/udma_wrapper/dma_top/base/IRQ_INST/usr_irq_xpm_cdc'
+Finished Sourcing Tcl File [/software/CAD/Xilinx/2019.2/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'infra/dma/xdma/inst/udma_wrapper/dma_top/base/IRQ_INST/usr_irq_xpm_cdc'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3795.785 ; gain = 0.000 ; free physical = 10363 ; free virtual = 13092
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 284 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 2 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 20 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 9 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 226 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 10 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 16 instances
+
+15 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:01:07 ; elapsed = 00:01:47 . Memory (MB): peak = 3795.785 ; gain = 2156.301 ; free physical = 10363 ; free virtual = 13092
+Command: opt_design -directive Explore
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xcku15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku15p'
+INFO: [Common 17-1686] The version limit for your license is '2021.03' and will not allow you to run Xilinx software released after that date (year & month). A version limit expiration means that while you will be able to continue to use the current version of tools or IP with this license, you will not be able to use any updates or new releases.
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 3867.824 ; gain = 64.039 ; free physical = 10356 ; free virtual = 13085
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK [See /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/source/ip_pcie4_uscale_plus_x1y0.xdc:120] and will prevent any subsequent automatic derivation of generated clocks on that pin. If the user defined clock specifies '-add', any existing auto-derived clocks on that pin are retained.
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 53 inverter(s) to 5024 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1a7eae77f
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:10 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10199 ; free virtual = 12927
+INFO: [Opt 31-389] Phase Retarget created 269 cells and removed 712 cells
+INFO: [Opt 31-1021] In phase Retarget, 5 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 3 load pin(s).
+Phase 2 Constant propagation | Checksum: 13397bbee
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:11 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10198 ; free virtual = 12926
+INFO: [Opt 31-389] Phase Constant propagation created 637 cells and removed 1284 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1593fce30
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:19 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10201 ; free virtual = 12930
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 3848 cells
+INFO: [Opt 31-1021] In phase Sweep, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common MMCM/DPLL/XPLL driver.
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
+INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
+Phase 4 BUFG optimization | Checksum: 1593fce30
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:21 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10201 ; free virtual = 12930
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 1593fce30
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:22 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10203 ; free virtual = 12931
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1593fce30
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:22 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10197 ; free virtual = 12932
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             269  |             712  |                                              5  |
+|  Constant propagation         |             637  |            1284  |                                              0  |
+|  Sweep                        |               0  |            3848  |                                              1  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.21 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10197 ; free virtual = 12932
+Ending Logic Optimization Task | Checksum: 12e3c9a4b
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:24 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10197 ; free virtual = 12932
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 12e3c9a4b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10195 ; free virtual = 12930
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10195 ; free virtual = 12930
+Ending Netlist Obfuscation Task | Checksum: 12e3c9a4b
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10195 ; free virtual = 12930
+INFO: [Common 17-83] Releasing license: Implementation
+39 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:37 . Memory (MB): peak = 3867.824 ; gain = 72.039 ; free physical = 10195 ; free virtual = 12930
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK [See /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/source/ip_pcie4_uscale_plus_x1y0.xdc:120] and will prevent any subsequent automatic derivation of generated clocks on that pin. If the user defined clock specifies '-add', any existing auto-derived clocks on that pin are retained.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10084 ; free virtual = 12819
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10053 ; free virtual = 12796
+INFO: [Common 17-1381] The checkpoint '/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/impl_1/top_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:36 ; elapsed = 00:00:22 . Memory (MB): peak = 3867.824 ; gain = 0.000 ; free physical = 10042 ; free virtual = 12800
+INFO: [runtcl-4] Executing : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+Command: report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/impl_1/top_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 4025.543 ; gain = 157.719 ; free physical = 10009 ; free virtual = 12768
+Command: place_design -directive AltSpreadLogic_medium
+Attempting to get a license for feature 'Implementation' and/or device 'xcku15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku15p'
+INFO: [Common 17-1686] The version limit for your license is '2021.03' and will not allow you to run Xilinx software released after that date (year & month). A version limit expiration means that while you will be able to continue to use the current version of tools or IP with this license, you will not be able to use any updates or new releases.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'AltSpreadLogic_medium' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4025.543 ; gain = 0.000 ; free physical = 10004 ; free virtual = 12763
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: c53051e5
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.14 . Memory (MB): peak = 4025.543 ; gain = 0.000 ; free physical = 10004 ; free virtual = 12762
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4025.543 ; gain = 0.000 ; free physical = 10004 ; free virtual = 12762
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: f2a4ff13
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:01:31 . Memory (MB): peak = 5055.227 ; gain = 1029.684 ; free physical = 8992 ; free virtual = 11757
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 17aec31e4
+
+Time (s): cpu = 00:01:36 ; elapsed = 00:01:46 . Memory (MB): peak = 5274.207 ; gain = 1248.664 ; free physical = 8758 ; free virtual = 11523
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 17aec31e4
+
+Time (s): cpu = 00:01:36 ; elapsed = 00:01:47 . Memory (MB): peak = 5274.207 ; gain = 1248.664 ; free physical = 8758 ; free virtual = 11523
+Phase 1 Placer Initialization | Checksum: 17aec31e4
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:01:47 . Memory (MB): peak = 5274.207 ; gain = 1248.664 ; free physical = 8746 ; free virtual = 11512
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 17ff1088a
+
+Time (s): cpu = 00:03:27 ; elapsed = 00:02:35 . Memory (MB): peak = 5400.383 ; gain = 1374.840 ; free physical = 8551 ; free virtual = 11317
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1018] Found 5825 candidate LUT instances to create LUTNM shape
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1087 nets or cells. Created 0 new cell, deleted 1087 existing cells and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5503.969 ; gain = 0.000 ; free physical = 8536 ; free virtual = 11303
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |           1087  |                  1087  |           0  |           1  |  00:00:03  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:01  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |           1087  |                  1087  |           0  |           3  |  00:00:04  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 13e9a7f2c
+
+Time (s): cpu = 00:05:56 ; elapsed = 00:03:50 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8525 ; free virtual = 11291
+Phase 2.2 Global Placement Core | Checksum: 1d3d5d168
+
+Time (s): cpu = 00:06:04 ; elapsed = 00:03:54 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8505 ; free virtual = 11272
+Phase 2 Global Placement | Checksum: 1d3d5d168
+
+Time (s): cpu = 00:06:04 ; elapsed = 00:03:54 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8564 ; free virtual = 11330
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1dd9d53c2
+
+Time (s): cpu = 00:06:14 ; elapsed = 00:03:57 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8555 ; free virtual = 11321
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 152c4ca61
+
+Time (s): cpu = 00:06:28 ; elapsed = 00:04:03 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8551 ; free virtual = 11317
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: ca9bbbe3
+
+Time (s): cpu = 00:06:29 ; elapsed = 00:04:03 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8548 ; free virtual = 11314
+
+Phase 3.4 Small Shape DP
+
+Phase 3.4.1 Small Shape Clustering
+Phase 3.4.1 Small Shape Clustering | Checksum: 159fbc7a0
+
+Time (s): cpu = 00:06:43 ; elapsed = 00:04:15 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8459 ; free virtual = 11226
+
+Phase 3.4.2 Flow Legalize Slice Clusters
+Phase 3.4.2 Flow Legalize Slice Clusters | Checksum: 11eddff5a
+
+Time (s): cpu = 00:06:45 ; elapsed = 00:04:17 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8460 ; free virtual = 11227
+
+Phase 3.4.3 Slice Area Swap
+Phase 3.4.3 Slice Area Swap | Checksum: 168421329
+
+Time (s): cpu = 00:06:58 ; elapsed = 00:04:27 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8390 ; free virtual = 11156
+
+Phase 3.4.4 Commit Slice Clusters
+Phase 3.4.4 Commit Slice Clusters | Checksum: 19158d63f
+
+Time (s): cpu = 00:07:21 ; elapsed = 00:04:35 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8397 ; free virtual = 11164
+Phase 3.4 Small Shape DP | Checksum: 19158d63f
+
+Time (s): cpu = 00:07:22 ; elapsed = 00:04:35 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8432 ; free virtual = 11198
+
+Phase 3.5 Re-assign LUT pins
+Phase 3.5 Re-assign LUT pins | Checksum: 2751be9f1
+
+Time (s): cpu = 00:07:26 ; elapsed = 00:04:39 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8433 ; free virtual = 11200
+
+Phase 3.6 Pipeline Register Optimization
+Phase 3.6 Pipeline Register Optimization | Checksum: 187113598
+
+Time (s): cpu = 00:07:28 ; elapsed = 00:04:41 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8437 ; free virtual = 11203
+Phase 3 Detail Placement | Checksum: 187113598
+
+Time (s): cpu = 00:07:29 ; elapsed = 00:04:42 . Memory (MB): peak = 5503.969 ; gain = 1478.426 ; free physical = 8437 ; free virtual = 11203
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK [See /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/source/ip_pcie4_uscale_plus_x1y0.xdc:120] and will prevent any subsequent automatic derivation of generated clocks on that pin. If the user defined clock specifies '-add', any existing auto-derived clocks on that pin are retained.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1c1bfa8cc
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-35] Processed net infra/clocks/rsto_ipb, inserted BUFG to drive 10936 loads.
+INFO: [Place 46-45] Replicated bufg driver infra/clocks/rst_ipb_reg_replica
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 1, Replicated BUFG Driver: 1, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 184a24f1f
+
+Time (s): cpu = 00:08:38 ; elapsed = 00:05:02 . Memory (MB): peak = 5564.586 ; gain = 1539.043 ; free physical = 8519 ; free virtual = 11285
+INFO: [Place 30-746] Post Placement Timing Summary WNS=1.546. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 18eb6276c
+
+Time (s): cpu = 00:08:39 ; elapsed = 00:05:02 . Memory (MB): peak = 5564.586 ; gain = 1539.043 ; free physical = 8520 ; free virtual = 11287
+Phase 4.1 Post Commit Optimization | Checksum: 18eb6276c
+
+Time (s): cpu = 00:08:40 ; elapsed = 00:05:03 . Memory (MB): peak = 5564.586 ; gain = 1539.043 ; free physical = 8520 ; free virtual = 11287
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 18eb6276c
+
+Time (s): cpu = 00:08:41 ; elapsed = 00:05:04 . Memory (MB): peak = 5564.586 ; gain = 1539.043 ; free physical = 8541 ; free virtual = 11307
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 5564.586 ; gain = 0.000 ; free physical = 8488 ; free virtual = 11255
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 2204f108c
+
+Time (s): cpu = 00:08:54 ; elapsed = 00:05:17 . Memory (MB): peak = 5564.586 ; gain = 1539.043 ; free physical = 8515 ; free virtual = 11282
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5564.586 ; gain = 0.000 ; free physical = 8515 ; free virtual = 11282
+Phase 4.4 Final Placement Cleanup | Checksum: 260576b24
+
+Time (s): cpu = 00:08:55 ; elapsed = 00:05:18 . Memory (MB): peak = 5564.586 ; gain = 1539.043 ; free physical = 8515 ; free virtual = 11282
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 260576b24
+
+Time (s): cpu = 00:08:56 ; elapsed = 00:05:18 . Memory (MB): peak = 5564.586 ; gain = 1539.043 ; free physical = 8516 ; free virtual = 11282
+Ending Placer Task | Checksum: 1d9263e6f
+
+Time (s): cpu = 00:08:56 ; elapsed = 00:05:18 . Memory (MB): peak = 5564.586 ; gain = 1539.043 ; free physical = 8515 ; free virtual = 11282
+INFO: [Common 17-83] Releasing license: Implementation
+73 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:09:08 ; elapsed = 00:05:30 . Memory (MB): peak = 5564.586 ; gain = 1539.043 ; free physical = 8764 ; free virtual = 11531
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5564.586 ; gain = 0.000 ; free physical = 8764 ; free virtual = 11531
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:13 ; elapsed = 00:00:04 . Memory (MB): peak = 5596.602 ; gain = 0.004 ; free physical = 8610 ; free virtual = 11501
+INFO: [Common 17-1381] The checkpoint '/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/impl_1/top_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 5596.605 ; gain = 32.020 ; free physical = 8730 ; free virtual = 11532
+INFO: [runtcl-4] Executing : report_io -file top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.45 . Memory (MB): peak = 5596.605 ; gain = 0.000 ; free physical = 8687 ; free virtual = 11489
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_placed.rpt -pb top_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.59 . Memory (MB): peak = 5596.605 ; gain = 0.000 ; free physical = 8725 ; free virtual = 11529
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xcku15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku15p'
+INFO: [Common 17-1686] The version limit for your license is '2021.03' and will not allow you to run Xilinx software released after that date (year & month). A version limit expiration means that while you will be able to continue to use the current version of tools or IP with this license, you will not be able to use any updates or new releases.
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.500 ns. Skipping all physical synthesis optimizations.
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5596.613 ; gain = 0.000 ; free physical = 8660 ; free virtual = 11464
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.291 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: f2537071
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:04 . Memory (MB): peak = 5596.613 ; gain = 0.000 ; free physical = 8587 ; free virtual = 11391
+
+Phase 2 Hold Fix Optimization
+INFO: [Physopt 32-668] Estimated Timing Summary | WNS=1.291 | TNS=0.000 | WHS=-2.060 | THS=-514.448 |
+INFO: [Physopt 32-45] Identified 1009 candidate nets for hold slack optimization.
+INFO: [Physopt 32-234] Optimized 1000 nets. Inserted 0 new ZHOLD_DELAYs. Calibrated 0 existing ZHOLD_DELAYs. Inserted 1000 buffers.
+
+INFO: [Physopt 32-668] Estimated Timing Summary | WNS=1.291 | TNS=0.000 | WHS=-0.264 | THS=-127.629 |
+Phase 2 Hold Fix Optimization | Checksum: f2537071
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:53 . Memory (MB): peak = 5596.613 ; gain = 0.000 ; free physical = 8560 ; free virtual = 11365
+Netlist sorting complete. Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.16 . Memory (MB): peak = 5596.613 ; gain = 0.000 ; free physical = 8563 ; free virtual = 11368
+INFO: [Physopt 32-669] Post Physical Optimization Timing Summary | WNS=1.291 | TNS=0.000 | WHS=-0.264 | THS=-127.629 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization            |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Fanout                  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Single Cell Placement   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Multi Cell Placement    |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Rewire                  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Critical Cell           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  SLR Crossing            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  DSP Register            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Critical Pin            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Very High Fanout        |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Total                   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Summary of Hold Fix Optimizations
+=================================
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization               |  WHS Gain (ns)  |  THS Gain (ns)  |  Added LUTs  |  Added FFs  |  Optimized Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT1 and ZHOLD Insertion   |          1.796  |        386.819  |        1000  |          0  |            1000  |           0  |           1  |  00:00:49  |
+|  Total                      |          1.796  |        386.819  |        1000  |          0  |            1000  |           0  |           1  |  00:00:49  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5620.609 ; gain = 0.000 ; free physical = 8545 ; free virtual = 11349
+Ending Physical Synthesis Task | Checksum: f2537071
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:57 . Memory (MB): peak = 5620.609 ; gain = 23.996 ; free physical = 8545 ; free virtual = 11349
+INFO: [Common 17-83] Releasing license: Implementation
+90 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:02:22 ; elapsed = 00:01:08 . Memory (MB): peak = 5620.609 ; gain = 24.004 ; free physical = 8572 ; free virtual = 11376
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5620.609 ; gain = 0.000 ; free physical = 8572 ; free virtual = 11376
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 5620.609 ; gain = 0.000 ; free physical = 8421 ; free virtual = 11349
+INFO: [Common 17-1381] The checkpoint '/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/impl_1/top_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 5620.609 ; gain = 0.000 ; free physical = 8524 ; free virtual = 11363
+Command: route_design -directive AlternateCLBRouting
+Attempting to get a license for feature 'Implementation' and/or device 'xcku15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku15p'
+INFO: [Common 17-1686] The version limit for your license is '2021.03' and will not allow you to run Xilinx software released after that date (year & month). A version limit expiration means that while you will be able to continue to use the current version of tools or IP with this license, you will not be able to use any updates or new releases.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'AlternateCLBRouting'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: 2010424c ConstDB: 0 ShapeSum: dc7d435f RouteDB: 9198e920
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 14822350f
+
+Time (s): cpu = 00:03:10 ; elapsed = 00:02:40 . Memory (MB): peak = 5965.344 ; gain = 336.723 ; free physical = 7903 ; free virtual = 10994
+Post Restoration Checksum: NetGraph: 75d65f80 NumContArr: 73157da4 Constraints: b39d7af3 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 19c895817
+
+Time (s): cpu = 00:03:11 ; elapsed = 00:02:41 . Memory (MB): peak = 5965.344 ; gain = 336.723 ; free physical = 7938 ; free virtual = 11029
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 19c895817
+
+Time (s): cpu = 00:03:11 ; elapsed = 00:02:42 . Memory (MB): peak = 5994.984 ; gain = 366.363 ; free physical = 7841 ; free virtual = 10932
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 19c895817
+
+Time (s): cpu = 00:03:11 ; elapsed = 00:02:42 . Memory (MB): peak = 5994.984 ; gain = 366.363 ; free physical = 7841 ; free virtual = 10932
+
+Phase 2.4 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.4 Global Clock Net Routing | Checksum: 1a3832760
+
+Time (s): cpu = 00:03:20 ; elapsed = 00:02:51 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7827 ; free virtual = 10918
+
+Phase 2.5 Update Timing
+Phase 2.5 Update Timing | Checksum: 1d6a62bba
+
+Time (s): cpu = 00:04:25 ; elapsed = 00:03:06 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7801 ; free virtual = 10892
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.320  | TNS=0.000  | WHS=-0.238 | THS=-63.909|
+
+Phase 2 Router Initialization | Checksum: 26e11c56c
+
+Time (s): cpu = 00:05:19 ; elapsed = 00:03:21 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7773 ; free virtual = 10865
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 119383
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 104902
+  Number of Partially Routed Nets     = 14481
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 27f69c739
+
+Time (s): cpu = 00:06:03 ; elapsed = 00:03:35 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7737 ; free virtual = 10828
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 16033
+ Number of Nodes with overlaps = 1092
+ Number of Nodes with overlaps = 100
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.199  | TNS=0.000  | WHS=-0.012 | THS=-0.055 |
+
+Phase 4.1 Global Iteration 0 | Checksum: 23a7ba749
+
+Time (s): cpu = 00:09:20 ; elapsed = 00:04:42 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7731 ; free virtual = 10823
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.199  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 29d5ff80f
+
+Time (s): cpu = 00:09:35 ; elapsed = 00:04:49 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7735 ; free virtual = 10827
+Phase 4 Rip-up And Reroute | Checksum: 29d5ff80f
+
+Time (s): cpu = 00:09:36 ; elapsed = 00:04:49 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7736 ; free virtual = 10828
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 226feecbf
+
+Time (s): cpu = 00:10:08 ; elapsed = 00:04:58 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7728 ; free virtual = 10819
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.199  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 5.1 Delay CleanUp | Checksum: 226feecbf
+
+Time (s): cpu = 00:10:09 ; elapsed = 00:04:58 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7729 ; free virtual = 10821
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 226feecbf
+
+Time (s): cpu = 00:10:09 ; elapsed = 00:04:59 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7729 ; free virtual = 10821
+Phase 5 Delay and Skew Optimization | Checksum: 226feecbf
+
+Time (s): cpu = 00:10:09 ; elapsed = 00:04:59 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7729 ; free virtual = 10821
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1bc16b285
+
+Time (s): cpu = 00:10:33 ; elapsed = 00:05:05 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7731 ; free virtual = 10822
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.199  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 247ace692
+
+Time (s): cpu = 00:10:34 ; elapsed = 00:05:06 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7731 ; free virtual = 10822
+Phase 6 Post Hold Fix | Checksum: 247ace692
+
+Time (s): cpu = 00:10:34 ; elapsed = 00:05:06 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7731 ; free virtual = 10822
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 3.51503 %
+  Global Horizontal Routing Utilization  = 3.33392 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 243ebca4f
+
+Time (s): cpu = 00:10:37 ; elapsed = 00:05:08 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7720 ; free virtual = 10812
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 243ebca4f
+
+Time (s): cpu = 00:10:37 ; elapsed = 00:05:08 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7718 ; free virtual = 10810
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 243ebca4f
+
+Time (s): cpu = 00:10:43 ; elapsed = 00:05:14 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7719 ; free virtual = 10811
+
+Phase 10 Route finalize
+Phase 10 Route finalize | Checksum: 243ebca4f
+
+Time (s): cpu = 00:10:44 ; elapsed = 00:05:15 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7725 ; free virtual = 10817
+
+Phase 11 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=1.199  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+INFO: [Route 35-61] The design met the timing requirement.
+Phase 11 Post Router Timing | Checksum: 2775e9621
+
+Time (s): cpu = 00:11:51 ; elapsed = 00:05:27 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 7688 ; free virtual = 10780
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:11:51 ; elapsed = 00:05:27 . Memory (MB): peak = 6258.453 ; gain = 629.832 ; free physical = 8128 ; free virtual = 11220
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+111 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:12:09 ; elapsed = 00:05:41 . Memory (MB): peak = 6258.453 ; gain = 637.844 ; free physical = 8128 ; free virtual = 11220
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 6258.453 ; gain = 0.000 ; free physical = 8128 ; free virtual = 11220
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 6258.453 ; gain = 0.000 ; free physical = 7938 ; free virtual = 11195
+INFO: [Common 17-1381] The checkpoint '/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/impl_1/top_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 6258.457 ; gain = 0.004 ; free physical = 8082 ; free virtual = 11218
+INFO: [runtcl-4] Executing : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
+Command: report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/impl_1/top_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:30 ; elapsed = 00:00:10 . Memory (MB): peak = 6346.504 ; gain = 88.047 ; free physical = 8063 ; free virtual = 11200
+INFO: [runtcl-4] Executing : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+Command: report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK [See /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/source/ip_pcie4_uscale_plus_x1y0.xdc:120] and will prevent any subsequent automatic derivation of generated clocks on that pin. If the user defined clock specifies '-add', any existing auto-derived clocks on that pin are retained.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/impl_1/top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:01:12 ; elapsed = 00:00:23 . Memory (MB): peak = 6348.723 ; gain = 2.219 ; free physical = 8094 ; free virtual = 11231
+INFO: [runtcl-4] Executing : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+Command: report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-3] User defined clock exists on pin infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK [See /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.srcs/sources_1/ip/xdma_0/ip_0/source/ip_pcie4_uscale_plus_x1y0.xdc:120] and will prevent any subsequent automatic derivation of generated clocks on that pin. If the user defined clock specifies '-add', any existing auto-derived clocks on that pin are retained.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+123 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:01:00 ; elapsed = 00:00:29 . Memory (MB): peak = 6372.730 ; gain = 24.008 ; free physical = 8009 ; free virtual = 11161
+INFO: [runtcl-4] Executing : report_route_status -file top_route_status.rpt -pb top_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+report_timing_summary: Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 6372.730 ; gain = 0.000 ; free physical = 7942 ; free virtual = 11101
+INFO: [runtcl-4] Executing : report_incremental_reuse -file top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file top_clock_utilization_routed.rpt
+report_clock_utilization: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 6372.730 ; gain = 0.000 ; free physical = 7939 ; free virtual = 11098
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_bus_skew_routed.rpt -pb top_bus_skew_routed.pb -rpx top_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xcku15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku15p'
+INFO: [Common 17-1686] The version limit for your license is '2021.03' and will not allow you to run Xilinx software released after that date (year & month). A version limit expiration means that while you will be able to continue to use the current version of tools or IP with this license, you will not be able to use any updates or new releases.
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode ( 100.0% nets are fully routed)
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+140 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 6372.730 ; gain = 0.000 ; free physical = 7942 ; free virtual = 11101
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 6372.730 ; gain = 0.000 ; free physical = 7734 ; free virtual = 11059
+INFO: [Common 17-1381] The checkpoint '/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/impl_1/top_postroute_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 6372.730 ; gain = 0.000 ; free physical = 7882 ; free virtual = 11087
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -warn_on_violation -file top_timing_summary_postroute_physopted.rpt -pb top_timing_summary_postroute_physopted.pb -rpx top_timing_summary_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_bus_skew_postroute_physopted.rpt -pb top_bus_skew_postroute_physopted.pb -rpx top_bus_skew_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 19 14:39:47 2021...
+
+*** Running vivado
+    with args -log top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: open_checkpoint top_postroute_physopt.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.19 . Memory (MB): peak = 1552.781 ; gain = 0.000 ; free physical = 11661 ; free virtual = 14877
+INFO: [Device 21-403] Loading part xcku15p-ffva1760-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2680.180 ; gain = 0.000 ; free physical = 10452 ; free virtual = 13668
+INFO: [Netlist 29-17] Analyzing 2046 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3595.473 ; gain = 126.348 ; free physical = 9646 ; free virtual = 12861
+Restored from archive | CPU: 6.210000 secs | Memory: 110.667992 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3595.473 ; gain = 126.348 ; free physical = 9646 ; free virtual = 12861
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3595.473 ; gain = 0.000 ; free physical = 9657 ; free virtual = 12872
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 254 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 2 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 20 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 9 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 194 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 10 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 16 instances
+  SRLC32E => SRL16E: 2 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2019.2 (64-bit) build 2708876
+open_checkpoint: Time (s): cpu = 00:00:48 ; elapsed = 00:01:46 . Memory (MB): peak = 3595.473 ; gain = 2042.695 ; free physical = 9657 ; free virtual = 12872
+Command: write_bitstream -force top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xcku15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku15p'
+INFO: [Common 17-1686] The version limit for your license is '2021.03' and will not allow you to run Xilinx software released after that date (year & month). A version limit expiration means that while you will be able to continue to use the current version of tools or IP with this license, you will not be able to use any updates or new releases.
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/CAD/Xilinx/2019.2/Vivado/2019.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC RTSTAT-10] No routable loads: 612 net(s) have no routable loads. The problem bus(es) and/or net(s) are datapath/rgen[6].dc/ipb_out[ipb_addr][5], datapath/rgen[10].dc/ipb_out[ipb_addr][5], datapath/rgen[4].dc/ipb_out[ipb_addr][5], datapath/rgen[9].dc/ipb_out[ipb_addr][5], datapath/rgen[3].dc/ipb_out[ipb_addr][5], datapath/rgen[8].dc/ipb_out[ipb_addr][5], datapath/rgen[17].dc/ipb_out[ipb_addr][5], datapath/rgen[16].dc/ipb_out[ipb_addr][5], datapath/rgen[15].dc/ipb_out[ipb_addr][5], datapath/rgen[7].dc/ipb_out[ipb_addr][5], datapath/rgen[14].dc/ipb_out[ipb_addr][5], datapath/rgen[0].dc/ipb_out[ipb_addr][5], datapath/rgen[13].dc/ipb_out[ipb_addr][5], datapath/rgen[1].dc/ipb_out[ipb_addr][5], datapath/rgen[12].dc/ipb_out[ipb_addr][5]... and (the first 15 of 612 listed).
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_0_int/ECC_RAM.RAMB36E2[0].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_0_int/ECC_RAM.RAMB36E2[1].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_0_int/ECC_RAM.RAMB36E2[2].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_0_int/ECC_RAM.RAMB36E2[3].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_0_int/ECC_RAM.RAMB36E2[4].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_0_int/ECC_RAM.RAMB36E2[5].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_1_int/ECC_RAM.RAMB36E2[0].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_1_int/ECC_RAM.RAMB36E2[1].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_1_int/ECC_RAM.RAMB36E2[2].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_1_int/ECC_RAM.RAMB36E2[3].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_1_int/ECC_RAM.RAMB36E2[4].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_1_int/ECC_RAM.RAMB36E2[5].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_post_inst/bram_16k_int/ECC_RAM.RAMB36E2[0].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_post_inst/bram_16k_int/ECC_RAM.RAMB36E2[1].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_post_inst/bram_16k_int/ECC_RAM.RAMB36E2[2].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_post_inst/bram_16k_int/ECC_RAM.RAMB36E2[3].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_post_inst/bram_16k_int/ECC_RAM.RAMB36E2[4].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_post_inst/bram_16k_int/ECC_RAM.RAMB36E2[5].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_repl_inst/bram_rep_int_0/ECC_RAM.RAMB36E2[0].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_repl_inst/bram_rep_int_0/ECC_RAM.RAMB36E2[1].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_repl_inst/bram_rep_int_0/ECC_RAM.RAMB36E2[2].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_repl_inst/bram_rep_int_0/ECC_RAM.RAMB36E2[3].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings, 22 Advisories
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 146319712 bits.
+Writing bitstream ./top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-186] '/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Fri Mar 19 14:46:27 2021. For additional details about this file, please refer to the WebTalk help file at /software/CAD/Xilinx/2019.2/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+46 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:02:44 ; elapsed = 00:02:06 . Memory (MB): peak = 4457.664 ; gain = 862.191 ; free physical = 9471 ; free virtual = 12708
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 19 14:46:28 2021...

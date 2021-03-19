@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Mar 19 13:58:15 2021
+# Process ID: 663
+# Current directory: /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/gtwizard_ultrascale_gth16g_synth_1
+# Command line: vivado -log gtwizard_ultrascale_gth16g.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gtwizard_ultrascale_gth16g.tcl
+# Log file: /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/gtwizard_ultrascale_gth16g_synth_1/gtwizard_ultrascale_gth16g.vds
+# Journal file: /storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/gtwizard_ultrascale_gth16g_synth_1/vivado.jou
+#-----------------------------------------------------------
+source gtwizard_ultrascale_gth16g.tcl -notrace

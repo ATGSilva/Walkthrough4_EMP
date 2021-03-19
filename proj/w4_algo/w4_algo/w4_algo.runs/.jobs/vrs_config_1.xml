@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="myfunc_0_synth_1" LaunchDir="/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/myfunc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bram_rx_buffer_synth_1" LaunchDir="/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/bram_rx_buffer_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="tx_fifo_synth_1" LaunchDir="/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/tx_fifo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="gtwizard_ultrascale_gty25g_synth_1" LaunchDir="/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/gtwizard_ultrascale_gty25g_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="gtwizard_ultrascale_gty16g_synth_1" LaunchDir="/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/gtwizard_ultrascale_gty16g_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="gtwizard_ultrascale_gth16g_synth_1" LaunchDir="/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/gtwizard_ultrascale_gth16g_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="axi_bram_ctrl_0_synth_1" LaunchDir="/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/axi_bram_ctrl_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="xdma_0_synth_1" LaunchDir="/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/xdma_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/storage1/ag17009/IPBB_TestBuilds/w4_emp/proj/w4_algo/w4_algo/w4_algo.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="myfunc_0_synth_1"/>
+		<Parent Id="bram_rx_buffer_synth_1"/>
+		<Parent Id="tx_fifo_synth_1"/>
+		<Parent Id="gtwizard_ultrascale_gty25g_synth_1"/>
+		<Parent Id="gtwizard_ultrascale_gty16g_synth_1"/>
+		<Parent Id="gtwizard_ultrascale_gth16g_synth_1"/>
+		<Parent Id="axi_bram_ctrl_0_synth_1"/>
+		<Parent Id="xdma_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

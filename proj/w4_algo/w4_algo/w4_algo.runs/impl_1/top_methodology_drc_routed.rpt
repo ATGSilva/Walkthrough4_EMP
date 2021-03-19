@@ -1,0 +1,324 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Fri Mar 19 14:38:34 2021
+| Host         : excession.phy.bris.ac.uk running 64-bit Scientific Linux release 7.9 (Nitrogen)
+| Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+| Design       : top
+| Device       : xcku15p-ffva1760-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 55
++-----------+------------------+------------------------------------------------------------------------------+------------+
+| Rule      | Severity         | Description                                                                  | Violations |
++-----------+------------------+------------------------------------------------------------------------------+------------+
+| TIMING-1  | Critical Warning | Invalid clock waveform on Clock Modifying Block                              | 1          |
+| TIMING-3  | Critical Warning | Invalid primary clock on Clock Modifying Block                               | 2          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                                                 | 6          |
+| SYNTH-6   | Warning          | Timing of a block RAM might be sub-optimal                                   | 33         |
+| TIMING-9  | Warning          | Unknown CDC Logic                                                            | 1          |
+| TIMING-10 | Warning          | Missing property on synchronizer                                             | 1          |
+| TIMING-47 | Warning          | False path or asynchronous clock group between synchronous clocks            | 6          |
+| XDCB-3    | Warning          | Same clock mentioned in multiple groups in the same set_clock_groups command | 1          |
+| XDCB-5    | Warning          | Runtime inefficient way to find pin objects                                  | 1          |
+| CLKC-40   | Advisory         | Substitute PLLE4 for MMCME4 check                                            | 1          |
+| CLKC-56   | Advisory         | MMCME4 with global clock driver has no LOC                                   | 2          |
++-----------+------------------+------------------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-1#1 Critical Warning
+Invalid clock waveform on Clock Modifying Block  
+Invalid clock waveform for clock infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK specified at a GTHE4_CHANNEL output infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK that does not match the CMB settings. The waveform of the clock is 4 {0 2}. The expected waveform is 2 {0 1}
+Related violations: <none>
+
+TIMING-3#1 Critical Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK is created on the output pin or net infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST/TXOUTCLK of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-3#2 Critical Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_intclk/O is created on the output pin or net infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_intclk/O of a Clock Modifying Block
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_7_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_7_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_meta_reg/PRE, infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_7_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_out_reg/PRE, infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_7_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_sync1_reg/PRE, infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_7_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_sync2_reg/PRE, infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_7_gthe4_cpll_cal_inst/reset_synchronizer_resetin_tx_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_rst_i/bufg_gt_userclk_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/xdma_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.xdma_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/as_mac_in_detect_user_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) infra/dma/xdma/inst/pcie4_ip_i/inst/as_mac_in_detect_ff1_reg/PRE, infra/dma/xdma/inst/pcie4_ip_i/inst/as_mac_in_detect_ff_reg/PRE, infra/dma/xdma/inst/pcie4_ip_i/inst/as_mac_in_detect_user_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/user_lnk_up_cdc_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) infra/dma/xdma/inst/pcie4_ip_i/inst/user_lnk_up_cdc/arststages_ff_reg[0]/CLR, infra/dma/xdma/inst/pcie4_ip_i/inst/user_lnk_up_cdc/arststages_ff_reg[1]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/user_lnk_up_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) infra/dma/xdma/inst/pcie4_ip_i/inst/user_lnk_up_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell infra/dma/xdma/inst/pcie4_ip_i/inst/pcie_4_0_pipe_inst/user_reset_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) infra/dma/xdma/inst/pcie4_ip_i/inst/user_reset_reg/PRE, infra/dma/xdma/inst/pcie4_ip_i/inst/user_reset_cdc/arststages_ff_reg[0]/PRE, infra/dma/xdma/inst/pcie4_ip_i/inst/user_reset_cdc/arststages_ff_reg[1]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+SYNTH-6#1 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[0].region/bgen.buf_gen[6].cbuf_gen.buf/rxbuf/ram_b_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#2 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[0].region/bgen.buf_gen[6].cbuf_gen.buf/rxbuf/ram_c_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#3 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[1].region/bgen.buf_gen[4].cbuf_gen.buf/rxbuf/ram_b_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#4 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[2].region/bgen.buf_gen[4].cbuf_gen.buf/rxbuf/ram_a_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#5 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[2].region/bgen.buf_gen[4].cbuf_gen.buf/rxbuf/ram_c_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#6 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[2].region/bgen.buf_gen[6].cbuf_gen.buf/rxbuf/ram_c_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#7 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[3].region/bgen.buf_gen[2].cbuf_gen.buf/rxbuf/ram_d_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#8 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[4].region/bgen.buf_gen[0].cbuf_gen.buf/rxbuf/ram_d_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#9 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[4].region/bgen.buf_gen[1].cbuf_gen.buf/rxbuf/ram_b_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#10 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[4].region/bgen.buf_gen[1].cbuf_gen.buf/rxbuf/ram_d_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#11 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[4].region/bgen.buf_gen[6].cbuf_gen.buf/rxbuf/ram_b_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#12 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[4].region/bgen.buf_gen[6].cbuf_gen.buf/rxbuf/ram_c_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#13 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[5].region/bgen.buf_gen[4].cbuf_gen.buf/rxbuf/ram_d_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#14 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[5].region/bgen.buf_gen[6].cbuf_gen.buf/rxbuf/ram_d_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#15 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[6].region/bgen.buf_gen[4].cbuf_gen.buf/rxbuf/ram_a_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#16 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[6].region/bgen.buf_gen[4].cbuf_gen.buf/rxbuf/ram_b_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#17 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[6].region/bgen.buf_gen[4].cbuf_gen.buf/rxbuf/ram_c_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#18 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[6].region/bgen.buf_gen[4].cbuf_gen.buf/rxbuf/ram_d_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#19 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[6].region/bgen.buf_gen[6].cbuf_gen.buf/rxbuf/ram_a_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#20 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[7].region/bgen.buf_gen[0].cbuf_gen.buf/rxbuf/ram_d_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#21 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[7].region/bgen.buf_gen[6].cbuf_gen.buf/rxbuf/ram_c_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#22 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[8].region/bgen.buf_gen[2].cbuf_gen.buf/rxbuf/ram_a_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#23 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[8].region/bgen.buf_gen[2].cbuf_gen.buf/rxbuf/ram_b_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#24 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[8].region/bgen.buf_gen[2].cbuf_gen.buf/rxbuf/ram_d_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#25 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[8].region/bgen.buf_gen[4].cbuf_gen.buf/rxbuf/ram_a_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#26 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[8].region/bgen.buf_gen[4].cbuf_gen.buf/rxbuf/ram_c_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#27 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[9].region/bgen.buf_gen[0].cbuf_gen.buf/rxbuf/ram_d_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#28 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[9].region/bgen.buf_gen[2].cbuf_gen.buf/rxbuf/ram_a_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#29 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[9].region/bgen.buf_gen[2].cbuf_gen.buf/rxbuf/ram_b_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#30 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[9].region/bgen.buf_gen[2].cbuf_gen.buf/rxbuf/ram_c_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#31 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[9].region/bgen.buf_gen[2].cbuf_gen.buf/rxbuf/ram_d_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#32 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[9].region/bgen.buf_gen[4].cbuf_gen.buf/rxbuf/ram_b_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#33 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance datapath/rgen[9].region/bgen.buf_gen[4].cbuf_gen.buf/rxbuf/ram_d_reg_bram_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+TIMING-47#1 Warning
+False path or asynchronous clock group between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks axi_clk and ipbus_clk (see constraint position 81 in the Timing Constraint window in Vivado IDE). It is not recommended to cover synchronous clock domains with constraints that prevent timing analysis as the design could fail in hardware.
+Related violations: <none>
+
+TIMING-47#2 Warning
+False path or asynchronous clock group between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks clk_40_pseudo and ipbus_clk (see constraint position 81 in the Timing Constraint window in Vivado IDE). It is not recommended to cover synchronous clock domains with constraints that prevent timing analysis as the design could fail in hardware.
+Related violations: <none>
+
+TIMING-47#3 Warning
+False path or asynchronous clock group between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks clk_payload_pseudo and ipbus_clk (see constraint position 81 in the Timing Constraint window in Vivado IDE). It is not recommended to cover synchronous clock domains with constraints that prevent timing analysis as the design could fail in hardware.
+Related violations: <none>
+
+TIMING-47#4 Warning
+False path or asynchronous clock group between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks ipbus_clk and axi_clk (see constraint position 81 in the Timing Constraint window in Vivado IDE). It is not recommended to cover synchronous clock domains with constraints that prevent timing analysis as the design could fail in hardware.
+Related violations: <none>
+
+TIMING-47#5 Warning
+False path or asynchronous clock group between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks ipbus_clk and clk_40_pseudo (see constraint position 81 in the Timing Constraint window in Vivado IDE). It is not recommended to cover synchronous clock domains with constraints that prevent timing analysis as the design could fail in hardware.
+Related violations: <none>
+
+TIMING-47#6 Warning
+False path or asynchronous clock group between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks ipbus_clk and clk_payload_pseudo (see constraint position 81 in the Timing Constraint window in Vivado IDE). It is not recommended to cover synchronous clock domains with constraints that prevent timing analysis as the design could fail in hardware.
+Related violations: <none>
+
+XDCB-3#1 Warning
+Same clock mentioned in multiple groups in the same set_clock_groups command  
+The same clock(s) mentioned in more than one group within the same set_clock_groups constraint: ipbus_clk
+This is not a valid scenario and should be corrected.
+set_clock_groups -asynchronous -group [get_clocks -include_generated_clocks axi_clk] -group [get_clocks -include_generated_clocks ipbus_clk]
+/storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/utils/firmware/ucf/slim_design_clock_constraints.tcl (Line: 24)
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option 'objects : [get_pins -hierarchical -filter {NAME =~infra/dma/xdma/*/phy_clk_i/bufg_gt_userclk/O}]' of constraint 'create_generated_clock' uses inefficient query to find pin objects (see constraint position '74' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /storage1/ag17009/IPBB_TestBuilds/w4_emp/src/emp-fwk/components/utils/firmware/ucf/slim_design_clock_constraints.tcl (Line: 9)
+Related violations: <none>
+
+CLKC-40#1 Advisory
+Substitute PLLE4 for MMCME4 check  
+The MMCME4 cell infra/clocks/mmcm has a single input clock whose source driver, BUFG_GT infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_userclk, is not optimally located and the MMCM has a configuration which could be accommodated by a PLL.  Consider changing the MMCM to a PLL which could align better with the input clock driver.
+Related violations: <none>
+
+CLKC-56#1 Advisory
+MMCME4 with global clock driver has no LOC  
+The MMCME4_ADV cell infra/clocks/mmcm CLKIN1 or CLKIN2 pin is driven by global Clock buffer(s) infra/dma/xdma/inst/pcie4_ip_i/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/bufg_gt_userclk and does not have a LOC constraint. It is recommended to LOC the MMCM and use the CLOCK_DEDICATED_ROUTE constraint on the net(s) driven by the global Clock buffer(s).
+Related violations: <none>
+
+CLKC-56#2 Advisory
+MMCME4 with global clock driver has no LOC  
+The MMCME4_ADV cell ttc/clocks/mmcm CLKIN1 and CLKIN2 pins are driven by global Clock buffer(s) infra/osc_clock/bufg_40ext, infra/clocks/bufgaux and does not have a LOC constraint. It is recommended to LOC the MMCM and use the CLOCK_DEDICATED_ROUTE constraint on the net(s) driven by the global Clock buffer(s).
+Related violations: <none>
+
+
